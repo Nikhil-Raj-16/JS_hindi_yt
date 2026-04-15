@@ -1,0 +1,58 @@
+JavaScript Execution Context
+
+when we give code to JS, Global EC is made(banega hi)  , and this ke andar global EC ko refer karte hai
+sabka global EC alag hota hai jaise nodeJS, browser mei this ki value window object hoti hai
+
+so, always global EC is made.
+JS - single threaded
+
+1. Global EC
+2. Function EC
+3. Eval EC (only know that it is there) we see doc mongoose
+
+interview mei 2 bhi chalega
+
+How JS code runs?
+1. Memory creation Phase
+2. Execution Phase
+
+
+1. Global EC -> allocated to this
+
+2. Memory creation Phase -> saare variables ko rkha jata hai, and value is assigned as undefined.
+e.g val1 and val2 = undefined, Function like addnum => defination
+result1 and result2 = undefined
+
+3.Execution Phase - we take first val1 and put the value in it and same for val2
+val1 = 10, val2 = 5
+
+Function ke andar kya hoga that don't come under Execution Phase, so we skip it
+now for result1 which calls the Function a new EC is created,i.e (new variable environment + Execution thread)
+
+every time a function is called a new EC is created.    aur use Memory Phase + Execution Phase
+
+and the EC created by function call is deleted after it's Execution.
+
+and now after the above steps we get result1 = 15, which we have in Execution Phase
+and same for result2 = 12   
+
+
+
+
+/****************************************************/
+CALL STACK
+
+like a stack, in which first Global EC is put in.
+
+we call one() after its Execution, one() is popped from stack and next two() is pushed into stack and after Execution
+it's popped and three() is pushed and popped after Execution.
+
+
+
+
+
+
+
+three()
+two()
+one()

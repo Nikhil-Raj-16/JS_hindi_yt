@@ -1,0 +1,19 @@
+const myNum = [1,2,3,4,5,6,7,8,9,10]
+
+const NewNums = myNum.map( (num) => num + 10)  // returns the value
+// in map if dont't write return you get undefined instead od empty array.
+
+// console.log(NewNums);
+
+// CHAINING  Concept multiple conditions
+
+const without_chaining = myNum.map( (num) => num*10 +1)
+const with_chaining = myNum.map( (num) => num*10).map((num) => num + 1).filter((num) => num > 40)
+
+console.log(`Without Chaining : ${without_chaining}`);
+console.log(`With Chaining    : ${with_chaining}`);
+
+
+
+
+
