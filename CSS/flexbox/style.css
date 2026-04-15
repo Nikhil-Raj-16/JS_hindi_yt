@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    /* background-color: #a8e778; */
+}
+
+#car{
+    display: flex;
+    width: 700px;
+    height: 600px;
+    background-color: goldenrod;
+    justify-content: end;
+    align-items: center;
+}
+
+
+#car1{
+    width: 150px;
+    height: 100px;
+    background-color: #414141;
+}   
+#car2{
+    width: 180px;
+    height: 80px;
+    background-color: red;
+}
+
+#car3{
+    
+    width: 200px;
+    height: 70px;
+    background-color: green;
+}
+
+
+/* Now if we want them to stay in the box in 
+left to right pos,
+instead of top to bottom
+we use flexbox.
+jinko agal bagal karna hai unke parent(green board)
+ko dundo aur display flex kardo.
+
+flex box mei 2 axis hoti hai x and y axis and 
+use in x axis we use justify content(width) and 
+for y-axis we use align items(height).
+
+ */
+
