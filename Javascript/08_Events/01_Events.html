@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>   
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("Owl Clicked")
+    // }    In this, we dont get more functionality so we avoid this
+
+
+    // see on MDN for more events
+    // Best approach
+    // 1. addEventListener
+
+
+    // document.getElementById('images').addEventListener('click', function (e) {
+        // alert("OWL clicked")
+        // console.log("Clicked inside the ul");     // browser and environment events, in interview asked what was the view when clicked,
+        // like window,maximize and timestamp at the time of click we can get by eventObject,also LOC of mouse
+
+        // in react we don't do this like timestamp one only use JS eventObject.
+        
+    // },false)
+
+
+    // here false is by default(called Event Propagation) i.e 3rd parameter, which is asked in interview
+
+    // 2. attachEvent() used to run on internet explorer, in early times
+    // 3. jQuery - .on  <-> .addEventListener
+
+    // Events that are IMP
+
+    /*
+        type, timestamp, preventDefault    
+        target , toElement, srcElement, currentTarget,
+
+        interview : clientX, clientY, screenX, screenY , tiltX, tiltY
+        
+        key Pressed check:
+        altKey, ctrlKey, shiftKey, Keycode(used to calc the typing speed)
+    */
+
+
+    // Event Propagation - false one- (Event Bubbling) True one - (Event Capturing)
+
+
+
+/*
+    document.getElementById('images').addEventListener('click', function (e) {
+        console.log("Clicked inside the ul");
+    },false)
+
+    document.getElementById('owl').addEventListener('click',function (e) {
+        console.log("Clicked on owl");
+        e.stopPropagation(); // now ul not execute
+    },false)
+*/
+    //  which will be printed first when clicked on owl-
+    
+    //  false so its bubbling going from bottom to up, i.e prints cliked on owl then , ul will execute
+    // chote se bada hota hai bubble.
+/*  
+    document.getElementById('images').addEventListener('click', function (e) {
+        console.log("Clicked inside the ul");
+    },true)
+
+    document.getElementById('owl').addEventListener('click',function (e) {
+        console.log("Clicked on owl");
+        
+    },true)
+*/
+    // when we write true, its eventCapturing goes from top to bottom, so first ul then owl
+
+
+/*
+    document.getElementById('google').addEventListener('click',function (e) {
+        console.log("Google Clicked");
+        e.stopPropagation();
+        e.preventDefault();
+    },true)
+*/
+
+
+document.querySelector('#images').addEventListener('click',function (e) {
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+        
+        let removeit = e.target.parentNode;  //li
+        removeit.remove()
+    }
+    // e.preventDefault();
+    // removeit.parentNode.removeChild(removeit)
+        
+},false)
+
+
+
+</script>
+</html>

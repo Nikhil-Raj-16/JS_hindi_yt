@@ -1,0 +1,26 @@
+JS (default) - behaviour
+
+1. synchronus 
+2. Single Threaded
+
+
+Execution Context-  execute one line of code at a time
+(each operation waits for the last one to complete before executing as Single Threaded)
+
+Blocking code               vs  Non Blocking code
+block the flow of program   vs  doesnt block the flow of program
+
+read file Sync              vs  read file Async
+
+means when OS reads file in (synchronus) it block the flow of program
+and vice versa in Async - file is being read and rest code is also executing
+
+
+register success mei sync acha hai
+
+both are good usecase depend
+
+
+
+
+

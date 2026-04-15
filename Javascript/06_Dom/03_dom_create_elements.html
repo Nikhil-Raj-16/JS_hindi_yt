@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() *10 + 1)
+    div.setAttribute("title","generated Title")
+    div.style.backgroundColor = "Green"
+    div.style.borderRadius = "15px"
+    div.style.textAlign = "Center"
+    // div.innerText = "Chai aur Code"
+    const addText = document.createTextNode("Nikhil")
+    div.appendChild(addText)
+    // till now div is in memory 
+    //  to attach to webpage do following
+
+
+    document.body.appendChild(div)
+
+    // similar this code as function and create 
+    // as many div using for loop
+
+
+    
+
+</script>
+</html>

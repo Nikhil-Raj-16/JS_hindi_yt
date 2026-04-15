@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(Langname){
+        const li = document.createElement('li');
+        li.innerHTML = `${Langname}`;
+        document.querySelector(".language").appendChild(li)
+    }
+
+    addlanguage("C++");
+    addlanguage("Python");
+    // in above method we have to traverse through the tree to get at the li 
+    // in this its 1 element so, fast but what if 1 lakh then,
+    //  optimization issue happens so, 
+
+    //  Below is better approach
+
+
+    function add_optimal_language(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector(".language").appendChild(li);
+    }
+
+    add_optimal_language("TypeScript")
+
+    // only difference is 2nd line in both functions
+
+    // EDIT
+
+    // first select values
+    const second_lang = document.querySelector('li:nth-child(2)')
+    // second_lang.innerHTML = "GOlang"
+
+
+    // in second app -> we create new element aur usko append kar diya
+    const newli = document.createElement('li');
+    newli.textContent = "Mojo";
+    second_lang.replaceWith(newli)
+
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>Express</li>'
+
+
+    // REMOVE
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>

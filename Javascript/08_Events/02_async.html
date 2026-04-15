@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // in setTimeout can use function callback or refernce of func
+    // setTimeout(function () {
+    //     console.log("Nikhil");
+    // },10000) // 10s ke baad prints nikhil one time
+
+    const sayNikhil = function () {
+        console.log("Nikhil");
+    }
+    setTimeout(sayNikhil,2000);
+
+
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "Best Javascript Series"
+    }
+    
+    const ChangeMe = setTimeout(changeText,2000);
+
+    // clearTimeout(ChangeMe);
+    document.querySelector('#stop').addEventListener('click',function () {
+        clearTimeout(ChangeMe);
+        console.log("Stopped");
+    })
+    
+    
+    
+</script>
+</html>

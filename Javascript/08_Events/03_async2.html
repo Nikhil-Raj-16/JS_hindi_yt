@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async_2</title>
+</head>
+<body style="background-color: #212121; color:aliceblue">
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+   const sayDate = function (str) {
+        console.log(str,Date.now());
+   }
+//    setInterval(function () {
+//         // console.log("Nikhil",Date.now());
+        
+//    },1000) // har 1s ke baad function is executed
+
+
+
+
+    let change;  // undefined
+    let a = 0;
+    let changeText = function (){
+        document.querySelector('h1').innerHTML = ++a;
+    }
+    // setInterval(sayDate,1000,"Hi")
+    // const changeME = setInterval(changeText,1000);
+
+    // const changeME = setInterval(function (){
+    //     document.querySelector('h1').innerHTML = ++a;
+    // },1000)
+    
+    document.querySelector('#start').addEventListener('click', function () {
+        if(!change){
+            change = setInterval(changeText,1000);
+            console.log("Started");
+        }
+    });
+    // if(){
+    //     // const change = setInterval(changeText,1000);
+    // }
+    document.querySelector('#stop').addEventListener('click',function () {
+        clearInterval(change);
+        change = null;
+        console.log("Stopped");
+        
+    });
+
+
+</script>
+</html>
