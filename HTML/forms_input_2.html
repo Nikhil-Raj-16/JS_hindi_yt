@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input types in Forms</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h2>Input types in Forms</h2>
+
+    <form action="url" method="GET" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" >
+            <label for="fname">First Name</label>
+            <br>
+            <input type="text" placeholder="First Name" name="" id="fname">
+            <br>
+            
+            
+            <label for="pass">Password</label>
+            <br>
+            <input type="password" placeholder="Minimum 8 characters" name="" id="pass">
+            <input type="file" name="" id="">
+            <br><br>
+
+            <input type="date" name="" id="">
+
+            <select name="" id="" >
+                <option value="vscode">vscode</option>
+                <option value="Sublime">Sublime</option>
+            </select>
+            <br><br>
+            <input type="radio" name="selecti" id="">VsCode
+            <br>
+            <input type="radio" name="selecti" id="">Sublime
+            <br><br>
+            <input type="range" name="" id="">
+            <br><br>
+            <input type="reset" value="Reset">
+            <button type="submit">Submit</button>
+        </form> 
+
+        <!--Input type hidden is also very useful if you want to send tokens with forms and don't want user to see  -->
+        <!-- also try range -->
+
+</body>
+</html>

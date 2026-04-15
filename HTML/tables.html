@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table{
+
+            border-collapse: collapse;  /*remove then see difference*/
+            text-align: center;
+            color: #FFF;
+        }
+
+        td,tr{
+            border: 1px solid black;
+            padding: 10px;   /*for table structure*/
+        }
+        tr {
+           background-color: #313131; 
+        }
+        tr:nth-child(even) {
+           background-color: #b5afaf; 
+        }
+    </style>
+</head>
+<body>
+    <table style="width: 100%;">
+        <tr>
+            <th>Country</th>
+            <th>Country Code</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>India</td>
+            <td>IN</td>
+            <td>india@gmail.com</td>
+        </tr>
+        <tr>
+            <td>America</td>
+            <td>US</td>
+            <td>america@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Japan</td>
+            <td>JPY</td>
+            <td>japan@gmail.com</td>
+        </tr>
+        <tr>
+            <td>United Kingdom</td>
+            <td>UK</td>
+            <td>uk@gmail.com</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- heading from top to bottom -->
+    <table>
+
+
+        <tr style="width: 50%;">
+            <th colspan="2">Country</th>
+            <td>India</td>
+            <td>Japan</td>
+        </tr>
+        <tr>
+            <th>Country code</th>
+            <td>IN</td>
+            <td>JPY</td>
+        </tr>
+
+        <!-- read about tfoot -->
+
+    </table>
+
+    <table>
+  <caption style="color: black;">
+    Council budget (in £) 2018
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Items</th>
+      <th scope="col">Expenditure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Donuts</th>
+      <td>3,000</td>
+    </tr>
+    <tr>
+      <th scope="row">Stationery</th>
+      <td>18,000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Totals</th>
+      <td>21,000</td>
+    </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>

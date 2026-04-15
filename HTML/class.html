@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+    <style>
+        .red{
+            background-color: #414141;
+            color: #fff;
+        }
+        #green{
+            background-color: darkgreen;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;  /*remove then see difference*/
+            text-align: center;
+            color: #FFF;
+        }
+
+        td,tr{
+            border: 1px solid black;
+            padding: 10px;   /*for table structure*/
+        }
+        tr {
+           background-color: #313131; 
+        }
+        
+    </style>
+</head>
+<body>
+    <p class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, ipsam!</p>
+    <p id="green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, ipsam!</p>
+    <h1>Test 1</h1>
+    <h3>Test 2</h3>
+    <p>Class is used to select elements, and also id's</p>
+    <p class="red">ID is unique for every element, but class can be same for other elements.</p>
+    <!--for selecting class in css we use .class_name  -->
+
+
+    <p>The <strong>iframe</strong> tag in HTML element represents a nested browsing context, embedding another HTML page into the current one.</p>
+    <p>Used in video and video player.</p>
+
+    
+
+
+    <table>
+        <th>Title</th> <th>URL</th>
+            <tr>
+                <td>Iframe</td>
+                <td><iframe width="560" height="315" src="https://www.youtube.com/embed/I7LrS1z_WNA?si=9HougRQPqzluShGu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+            </tr>
+
+            <tr>
+                <td>CSS</td>
+                <td><iframe width="560" height="315" src="https://www.youtube.com/embed/4-Y0r7aIZJQ?si=FCYGu-NfXWbu6_sE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+            </tr>        
+            <tr>
+                <td>Javascript</td>
+                <td><iframe width="560" height="315" src="https://www.youtube.com/embed/Hr5iLG7sUa0?si=Ga6Btt4o0TVlg4Ko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+            </tr>
+    </table>
+</body>
+</html>
